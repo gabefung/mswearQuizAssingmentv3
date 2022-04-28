@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:monospace;;
+  background-color:Orange;
+  color: brown;
+  text-align: center;
+}
+
+/* Style the header */
+
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header' 
+      'left' 
+      'right' 
+      'footer1'
+	  'footer2';
+      
+}
+
+.header {
+  grid-area: header;
+  background-color: orange;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+  
+ 
+
+.left,
+.right,
+.header,
+.footer1, footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: orange;
+  /* border:thin solid black; */
+}
+
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: orange;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: orange;
+  padding: 10px;
+  text-align: center;
+  color:brown;
+}
+.options{
+	border-radius: 25px;
+	
+	margin: 10px;
+	background-color:brown;
+	color:orange;
+}
+
+#question {
+  font-size: 2em;
+  font-weight:bold;
+}
+#hint {
+	border-radius:15px;
+	border:thin solid black;
+	padding:10px;
+}
+
+#hintButton{
+	height:70px;
+	width:130px;
+	padding:10px;
+	background-color: brown;
+	color:orange;
+}
+.options {
+   font-size:1.5em;
+   padding:0.4em;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  border-radius:25px;
+}
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color:brown;
+    color:orange;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    /* vertically and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align:center;
+}
+#restart {
+	width:700px;
+	height: 100px;
+	padding:10px;
+	background-color:orange;
+	color: brown;
+	position: absolute;
+	border-radius:25px;
+	text-align:center;
+}
+
+#timer {
+	
+    padding:10px;
+    background-color:brown;
+    color:orange;
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+   
+	
+}
+#start{
+	z-index:10;
+	background-color:brown;
+	width:100vw;
+	height:90vw;
+	position:fixed;
+	color:orange;
+	font-size:50px;
+	font-family: monospace;
+	text-align:center;
+}
+/* Desktop Version */
+@media (min-width: 768px) {
+	
+ .grid-container  {
+  grid-template-areas: 
+    'header header header header' 
+    'left left right right' 
+    'footer1 footer1 footer2 footer2';
+
+  
+  }
+}
+
